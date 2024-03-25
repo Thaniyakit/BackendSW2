@@ -16,7 +16,7 @@ const auth = require('./routes/auth');
 const app=express();
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: process.env.FRONTEND_URL,
     credentials : true,
 };
 app.use(cors(corsOptions));
